@@ -1,0 +1,66 @@
+<!doctype html>
+<html ng-app='ZmajevacApp' lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Micro Watering Plant</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+<body>
+  <div class="container-fluid">
+    <div class="page-header">
+      <h1>Dracaena Fragrans</h1>
+    </div>
+    <div ng-controller='WateringController' class="row">
+      <div class="col-md-4">
+          <img src="images/zmajevac.jpg" alt="Picture of plant" class="img-rounded">
+      </div>
+      <div class="col-md-8">
+        <table class="table" id="plant-info">
+        <thead>
+          <tr>
+            <th>Sensor</th>
+            <th>Value</th>
+            <th>Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Soil Humidity 1</td>
+            <td>45%</td>
+            <td>2016-12-08 16:45:21</td>
+          </tr>
+          <tr>
+            <td>Soil Humidity 2</td>
+            <td>54%</td>
+            <td>2016-12-08 16:45:21</td>
+          </tr>
+          <tr>
+            <td>Temperature</td>
+            <td>32°C</td>
+            <td>2016-12-08 16:43:21</td>
+          </tr>
+        </tbody>
+        </table>
+        <p class="bg-success">Last watered {{wateringTime.toLocaleString()}}</p>
+        <button ng-click="waterZmajevac()" type="button" class="btn btn-primary btn-block">Water</button>
+      </div>
+    </div>
+
+  </div>
+  <br>
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted">GreenDog AB</p>
+      </div>
+  </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="lib/jquery-1.11.3.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="lib/script.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
